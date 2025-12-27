@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #d68e8e;
+    font-family: monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 330px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(193, 27, 27, 0.2);
+    text-align: center;
+  }
+
+  .input-group {
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+
+  .toggle {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+  }
+
+  .forgot {
+    text-align: right;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    display: block;
+    color: #161718;
+    text-decoration: none;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .btn img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn-primary,
+  .btn.fb,
+  .btn.google,
+  .btn.linkedin,
+  .btn.naukri {
+    background: #344050;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .text {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+
+  .divider {
+    font-weight: bold;
+    color: #777;
+    margin: 15px 0;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>LOGIN</h1>
+
+    <div class="input-group">
+      <input type="text" placeholder="Full Name" required>
+    </div>
+
+    <div class="input-group">
+      <input type="email" placeholder="Email">
+    </div>
+
+    <div class="input-group">
+      <input type="password" id="loginPass" placeholder="Password">
+      <span class="toggle" onclick="togglePass('loginPass')">👁️</span>
+    </div>
+
+    <a href="#" class="forgot">Forgot password?</a>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+
+    <p class="text">Don't have an account? <a href="re_si.html">Sign in</a></p>
+
+    <div class="divider">OR</div>
+
+    <a href="http://google.com">
+      <button class="btn google">
+        <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png">
+        Login with Google
+      </button>
+    </a>
+
+    <a href="http://linkedin.com">
+      <button class="btn linkedin">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
+        Login with LinkedIn 
+      </button>
+    </a>
+
+    <a href="https://www.naukri.com">
+      <button class="btn naukri">
+        <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png">
+        Login with Naukri
+      </button>
+    </a>
+
+  </div>
+
+<script>
+  function togglePass(id) {
+    let field = document.getElementById(id);
+    field.type = field.type === "password" ? "text" : "password";
+  }
+</script>
+
+</body>
+</html>
+
+
